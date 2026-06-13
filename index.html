@@ -4,25 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A Cinematic Birthday Surprise | For Someone Special</title>
-    <!-- High-End Typography -->
     <link
       href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,900&display=swap"
       rel="stylesheet"
     />
     <style>
       :root {
-        --accent: #ff2d55;
-        --accent-glow: rgba(255, 45, 85, 0.5);
-        --gold: #d4af37;
-        --glass: rgba(255, 255, 255, 0.05);
-        --glass-border: rgba(255, 255, 255, 0.1);
-        --bg-dark: #0a0a0b;
-        --royal-red: #6e0000;
-        --bulb-warm: #ffde6b;
-        --bulb-glow: rgba(255, 222, 107, 0.8);
+        --accent: #9b7fe8;
+        --accent-glow: rgba(155, 127, 232, 0.5);
+        --gold: #c8b8f0;
+        --glass: rgba(180, 160, 240, 0.07);
+        --glass-border: rgba(180, 160, 240, 0.18);
+        --bg-dark: #0d0b14;
+        --royal-purple: #2e1a5e;
+        --bulb-warm: #d8c4ff;
+        --bulb-glow: rgba(200, 170, 255, 0.8);
       }
 
-      /* --- Strict Layout Fixes --- */
       html,
       body {
         margin: 0;
@@ -46,7 +44,6 @@
         perspective: 1000px;
       }
 
-      /* --- Main Container / Page Layout --- */
       .page {
         position: absolute;
         top: 0;
@@ -74,17 +71,14 @@
         z-index: 10;
       }
 
-      /* --- Animations --- */
       @keyframes floatHeart {
         0% {
           transform: translateY(0) scale(0) rotate(0deg);
           opacity: 0;
         }
-
         20% {
           opacity: 0.8;
         }
-
         100% {
           transform: translateY(-110vh) scale(1.5) rotate(360deg);
           opacity: 0;
@@ -97,13 +91,11 @@
             0 0 5px var(--accent),
             0 0 10px var(--accent);
         }
-
         50% {
           box-shadow:
             0 0 20px var(--accent),
             0 0 40px var(--accent);
         }
-
         100% {
           box-shadow:
             0 0 5px var(--accent),
@@ -117,7 +109,6 @@
           opacity: 0;
           transform: scale(0);
         }
-
         50% {
           opacity: 1;
           transform: scale(1.2);
@@ -126,7 +117,7 @@
 
       /* --- Hero Page --- */
       #hero-page {
-        background: radial-gradient(circle at center, #1a0a0c 0%, #050505 100%);
+        background: radial-gradient(circle at center, #1a0f2e 0%, #080610 100%);
       }
 
       .hero-title {
@@ -134,7 +125,7 @@
         font-size: clamp(2.5rem, 8vw, 5.5rem);
         font-weight: 900;
         font-style: italic;
-        background: linear-gradient(to right, #fff, #ff2d55, #fff);
+        background: linear-gradient(to right, #e8dcff, #9b7fe8, #e8dcff);
         background-size: 200% auto;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -152,7 +143,7 @@
         font-size: 1.1rem;
         letter-spacing: 4px;
         text-transform: uppercase;
-        color: rgba(255, 255, 255, 0.6);
+        color: rgba(210, 190, 255, 0.6);
         margin-bottom: 3rem;
       }
 
@@ -179,7 +170,7 @@
         box-shadow: 0 0 50px var(--accent);
       }
 
-      /* --- SLIDER MESSAGE CARD --- */
+      /* --- Slider --- */
       .slider-card {
         background: var(--glass);
         backdrop-filter: blur(20px);
@@ -210,7 +201,6 @@
           opacity: 0;
           transform: scale(0.95);
         }
-
         to {
           opacity: 1;
           transform: scale(1);
@@ -221,7 +211,7 @@
         font-family: "Playfair Display", serif;
         font-size: clamp(1.5rem, 4vw, 2.2rem);
         margin-bottom: 30px;
-        color: #fff;
+        color: #f0eaff;
         font-weight: 400;
       }
 
@@ -253,10 +243,10 @@
       }
 
       #celebration-page.bright {
-        background: radial-gradient(circle at center, #2a0a0e 0%, #0a0a0b 100%);
+        background: radial-gradient(circle at center, #1a0f2e 0%, #0d0b14 100%);
       }
 
-      /* --- FAIRY LIGHTS --- */
+      /* --- Fairy Lights --- */
       .fairy-lights-container {
         position: absolute;
         top: 0;
@@ -275,7 +265,7 @@
         width: 100%;
         height: 100%;
         fill: none;
-        stroke: #222;
+        stroke: #2a2040;
         stroke-width: 2;
       }
 
@@ -284,7 +274,7 @@
         width: 16px;
         height: 24px;
         border-radius: 50% 50% 50% 50% / 70% 70% 30% 30%;
-        background: #444;
+        background: #2a2040;
         transform-origin: top center;
         transform: translate(-50%, 0);
         box-shadow: none;
@@ -298,7 +288,7 @@
           circle at 30% 30%,
           #fff,
           var(--bulb-warm) 60%,
-          #b8860b
+          #9b7fe8
         );
         box-shadow:
           0 0 15px var(--bulb-glow),
@@ -306,7 +296,16 @@
         animation: flicker var(--d) infinite alternate;
       }
 
-      /* --- REALISTIC BALLOONS --- */
+      @keyframes flicker {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0.7;
+        }
+      }
+
+      /* --- Balloons --- */
       .balloon {
         position: absolute;
         bottom: -200px;
@@ -335,7 +334,7 @@
         bottom: -100px;
         width: 1px;
         height: 100px;
-        background: rgba(255, 255, 255, 0.3);
+        background: rgba(220, 200, 255, 0.3);
         transform-origin: top;
         animation: stringWobble 2s infinite ease-in-out;
       }
@@ -356,7 +355,6 @@
         0% {
           transform: translateY(0) translateX(0) rotate(0deg);
         }
-
         100% {
           transform: translateY(-130vh) translateX(0) rotate(0deg);
           opacity: 0;
@@ -368,13 +366,12 @@
         100% {
           transform: rotate(-2deg);
         }
-
         50% {
           transform: rotate(2deg);
         }
       }
 
-      /* --- Curtain Page --- */
+      /* --- Curtain --- */
       .stage {
         position: relative;
         width: 100vw;
@@ -390,8 +387,8 @@
         height: 100%;
         background: repeating-linear-gradient(
           to right,
-          var(--royal-red),
-          #4a0000 10%
+          var(--royal-purple),
+          #1a0f3e 10%
         );
         z-index: 20;
         transition: transform 2.5s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -411,7 +408,6 @@
       .open .curtain-left {
         transform: translateX(-100%) skewY(-5deg);
       }
-
       .open .curtain-right {
         transform: translateX(100%) skewY(5deg);
       }
@@ -422,12 +418,12 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: radial-gradient(circle, #1a1a1a, #000);
+        background: radial-gradient(circle, #1a1030, #000);
       }
 
       .message-card {
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(180, 160, 240, 0.06);
+        border: 1px solid rgba(180, 160, 240, 0.15);
         padding: clamp(20px, 5vw, 50px);
         border-radius: 30px;
         max-width: 700px;
@@ -436,9 +432,9 @@
         position: relative;
       }
 
-      /* --- MEMORY GALLERY FIXES --- */
+      /* --- Gallery --- */
       #gallery-page {
-        background: #050505;
+        background: #080610;
         overflow-y: auto;
         display: block;
         padding: 100px 20px;
@@ -499,7 +495,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.7);
+        background: rgba(20, 10, 40, 0.75);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -516,7 +512,7 @@
       .hover-message {
         font-family: "Dancing Script", cursive;
         font-size: 1.8rem;
-        color: #fff;
+        color: #f0eaff;
         text-align: center;
         line-height: 1.4;
         text-shadow: 0 0 15px var(--accent);
@@ -528,11 +524,10 @@
         transform: translateY(0);
       }
 
-      /* Sparkle over gallery */
       .gallery-sparkle {
         position: absolute;
         pointer-events: none;
-        background: white;
+        background: #d0b8ff;
         border-radius: 50%;
         animation: sparkleAnim 2s infinite;
       }
@@ -543,7 +538,6 @@
           opacity: 0;
           transform: scale(0);
         }
-
         50% {
           opacity: 0.8;
           transform: scale(1);
@@ -554,7 +548,6 @@
         .gallery-grid {
           grid-template-columns: 1fr;
         }
-
         .memory-card {
           height: 350px;
         }
@@ -643,7 +636,7 @@
       </div>
     </section>
 
-    <!-- CURTAIN SECTION -->```
+    <!-- CURTAIN SECTION -->
     <section id="curtain-page" class="page" style="padding: 0">
       <div class="stage" id="stage">
         <div class="curtain-panel curtain-left"></div>
@@ -664,7 +657,7 @@
               style="
                 font-size: clamp(1rem, 2vw, 1.2rem);
                 line-height: 1.8;
-                color: rgba(255, 255, 255, 0.8);
+                color: rgba(220, 210, 255, 0.85);
               "
             >
               Today isn't just a date on the calendar; it's a celebration of the
@@ -672,13 +665,12 @@
               magic as you give to everyone around you. I know I hurted you in
               many ways but MUSU plzz forgive me for that my Love for you is
               unmatchable. We fought each other, created misunderstandings, said
-              thingsto each other which hurted usss but eventualyy we always
+              things to each other which hurted usss but eventualy we always
               love each other Natisha, you are my absolute favorite person, and
               my happiest moments are always spent by your side. You make my
               life complete, and I cannot imagine walking through the rest of
               this journey without you. I Love youuu
             </p>
-
             <button
               class="btn-neon"
               style="margin-top: 40px; animation: none"
@@ -691,10 +683,8 @@
       </div>
     </section>
 
-    <!-- UPDATED GALLERY SECTION -->
+    <!-- GALLERY SECTION -->
     <section id="gallery-page" class="page">
-      <!---->
-      <!-- Persistent Background Elements -->
       <div
         id="gallery-bg-elements"
         style="
@@ -707,49 +697,42 @@
           z-index: -1;
         "
       ></div>
-
       <h2 class="gallery-title">Moments in Time</h2>
       <div class="gallery-grid">
-        <!-- Memory 1 -->
         <div class="memory-card">
           <img src="🩷.webp" alt="Memory" class="memory-image" />
           <div class="memory-hover-overlay">
-            <p class="hover-message">You make my world beautiful ❤️</p>
+            <p class="hover-message">You make my world beautiful 💜</p>
           </div>
         </div>
-        <!-- Memory 2 -->
         <div class="memory-card">
           <img src="download (1).webp" alt="Memory" class="memory-image" />
           <div class="memory-hover-overlay">
             <p class="hover-message">Our memories are forever ✨</p>
           </div>
         </div>
-        <!-- Memory 3 -->
         <div class="memory-card">
           <img src="test.jpeg" alt="Memory" class="memory-image" />
           <div class="memory-hover-overlay">
-            <p class="hover-message">My favorite smile in the world 💖</p>
+            <p class="hover-message">My favorite smile in the world 🌸</p>
           </div>
         </div>
-        <!-- Memory 4 -->
         <div class="memory-card">
           <img src="download (3).webp" alt="Memory" class="memory-image" />
           <div class="memory-hover-overlay">
             <p class="hover-message">Every second with you is a gift 🎁</p>
           </div>
         </div>
-        <!-- Memory 5 -->
         <div class="memory-card">
           <img src="download (9).jpeg" alt="Memory" class="memory-image" />
           <div class="memory-hover-overlay">
             <p class="hover-message">To many more adventures together 🥂</p>
           </div>
         </div>
-        <!-- Memory 6 -->
         <div class="memory-card">
           <img src="download (2).webp" alt="Memory" class="memory-image" />
           <div class="memory-hover-overlay">
-            <p class="hover-message">Always & Forever 🌹</p>
+            <p class="hover-message">Always & Forever 🌙</p>
           </div>
         </div>
       </div>
@@ -766,29 +749,23 @@
         type="audio/mpeg"
       />
     </audio>
-    -->
 
     <script>
-      // --- Navigation Logic ---
       function transitionTo(pageId) {
         document
           .querySelectorAll(".page")
           .forEach((p) => p.classList.remove("active"));
         const target = document.getElementById(pageId);
         target.classList.add("active");
-
         if (pageId === "curtain-page") {
           setTimeout(() => {
             document.getElementById("stage").classList.add("open");
             startSparkles("message-card");
           }, 1000);
         }
-        if (pageId === "gallery-page") {
-          startGalleryEffects();
-        }
+        if (pageId === "gallery-page") startGalleryEffects();
       }
 
-      // --- Heart Particles (Shared) ---
       function createHeart(containerId) {
         const container = document.getElementById(containerId);
         if (!container) return;
@@ -796,8 +773,8 @@
         heart.style.position = "absolute";
         heart.style.left = Math.random() * 100 + "vw";
         heart.style.bottom = "-10vh";
-        heart.style.color = "var(--accent)";
-        heart.innerHTML = "❤️";
+        heart.style.color = "#b89cf0";
+        heart.innerHTML = "💜";
         heart.style.fontSize = Math.random() * 20 + 10 + "px";
         heart.style.animation = `floatHeart ${Math.random() * 3 + 3}s linear forwards`;
         container.appendChild(heart);
@@ -807,7 +784,6 @@
       setInterval(() => createHeart("particle-container"), 300);
       setInterval(() => createHeart("slider-particles"), 400);
 
-      // --- Slider Logic ---
       function nextStep(step) {
         document
           .querySelectorAll(".step-content")
@@ -823,7 +799,6 @@
         transitionTo("celebration-page");
       }
 
-      // --- Celebration Flow ---
       let celebStep = 1;
       function celebFlow() {
         const btn = document.getElementById("celeb-master-btn");
@@ -853,17 +828,15 @@
         }
       }
 
-      // --- Realistic Balloons Logic ---
       function spawnBalloons(targetContainer) {
         const colorGradients = [
-          ["#ff2d55", "#800020"],
-          ["#74b9ff", "#0984e3"],
-          ["#55efc4", "#00b894"],
-          ["#ffeaa7", "#fdcb6e"],
-          ["#a29bfe", "#6c5ce7"],
-          ["#ff9ff3", "#f368e0"],
+          ["#c4a8ff", "#7c5ccc"],
+          ["#e0d0ff", "#9b7fe8"],
+          ["#b8a0f0", "#6644bb"],
+          ["#f0e8ff", "#c0a0f8"],
+          ["#d4b8ff", "#8860e0"],
+          ["#e8d8ff", "#aa88f0"],
         ];
-
         const interval = setInterval(() => {
           const b = document.createElement("div");
           const shine = document.createElement("div");
@@ -873,7 +846,7 @@
             colorGradients[Math.floor(Math.random() * colorGradients.length)];
           b.style.left = Math.random() * 95 + "vw";
           b.style.background = `radial-gradient(circle at 70% 30%, ${gradient[0]}, ${gradient[1]})`;
-          b.style.boxShadow = `inset -10px -10px 20px rgba(0,0,0,0.3), 0 10px 30px rgba(0,0,0,0.2)`;
+          b.style.boxShadow = `inset -10px -10px 20px rgba(0,0,0,0.3), 0 10px 30px rgba(100,60,160,0.3)`;
           b.appendChild(shine);
           targetContainer.appendChild(b);
           setTimeout(() => b.remove(), 8000);
@@ -881,10 +854,8 @@
         setTimeout(() => clearInterval(interval), 6000);
       }
 
-      // --- Gallery Special Effects ---
       function startGalleryEffects() {
         const container = document.getElementById("gallery-bg-elements");
-        // Spawn continuous balloons in background of gallery
         setInterval(() => {
           if (
             document.getElementById("gallery-page").classList.contains("active")
@@ -892,8 +863,6 @@
             spawnBalloons(container);
           }
         }, 8000);
-
-        // Random sparkles in gallery
         setInterval(() => {
           if (
             document.getElementById("gallery-page").classList.contains("active")
@@ -913,10 +882,14 @@
         const card = document.getElementById(targetId);
         setInterval(() => {
           const s = document.createElement("div");
-          s.classList.add("sparkle-particle");
+          s.style.position = "absolute";
+          s.style.borderRadius = "50%";
+          s.style.background = "#d0b8ff";
           s.style.width = s.style.height = Math.random() * 4 + 2 + "px";
           s.style.top = Math.random() * 100 + "%";
           s.style.left = Math.random() * 100 + "%";
+          s.style.animation = "sparkle 1s forwards";
+          s.style.pointerEvents = "none";
           card.appendChild(s);
           setTimeout(() => s.remove(), 1000);
         }, 50);
